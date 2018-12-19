@@ -1,24 +1,5 @@
-# README
+# KIRBY & BRIAN 2018
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+On October 27th, 2018, I got married to Kirby Robbins (now Kirby Yates)! Planning our wedding was a lot of work, but one of my favorite parts of planning was creating our wedding website from scratch with Ruby on Rails and jQuery. It's a little niftier than your run-of-the-mills wedding website - it features some Google Maps JavaScript API magic, and allows guests to submit RSVPs and post messages.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To view the website, please visit https://kirbyandbrian.herokuapp.com/
