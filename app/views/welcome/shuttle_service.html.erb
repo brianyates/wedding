@@ -1,0 +1,120 @@
+<div id="background"></div>
+<div id="menu-overlay"></div>
+<div id="menu">
+	<a id="close-menu">Close</a>
+	<div class="menu-img-container">
+		<a href="/"><%= image_tag "logo_pic.jpg", class: "img-circle" %></a>
+	</div>
+	<div class="menu-container">
+		<a href="/#our-story"><div class="icon-container"><i class="fa fa-book" aria-hidden="true"></i></div>OUR STORY</a>
+		<a href="/#wedding-details"><div class="icon-container"><i class="fa fa-info-circle" aria-hidden="true"></i></div>DETAILS</a>
+		<a href="/shuttle-service" data-turbolinks="false"><div class="icon-container"><i class="fa fa-bus" aria-hidden="true"></i></div>SHUTTLE SERVICE</a>
+		<a href="/#wedding-party"><div class="icon-container"><i class="fa fa-users" aria-hidden="true"></i></div>WEDDING PARTY</a>
+		<!--<a class="main-menu" href="/#rsvp"><div class="icon-container"><i class="fa fa-address-card-o" aria-hidden="true"></i></div>RSVP</a></li> -->
+		<a href="/#photos"><div class="icon-container"><i class="fa fa-photo" aria-hidden="true"></i></div>PHOTOS</a>
+		<a href="/#things-to-do"><div class="icon-container"><i class="fa fa-binoculars" aria-hidden="true"></i></div>THINGS TO DO</a>
+		<a href="/#accomodations"><div class="icon-container"><i class="fa fa-building-o" aria-hidden="true"></i></div>ACCOMODATIONS</a>
+		<a href="/#registry"><div class="icon-container"><i class="fa fa-gift" aria-hidden="true"></i></div>REGISTRY</a>
+		<a href="/#messages"><div class="icon-container"><i class="fa fa-pencil" aria-hidden="true"></i></div>MESSAGES</a>
+	</div>
+</div>
+<div style="height:50px"></div>
+<div id="nav" class="scrolled">
+	<button id="menu-btn">
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div id="menu-text">Menu</div>
+	</button>
+	<div class="nav-text">Kirby & Brian 2018</div>
+</div>
+<div class="main-container">
+    <div style="padding: 0 10px">
+        <h1 style="padding: 40px 0 5px 0; max-width: 770px; margin: 0 auto 50px auto;">Shuttle Service</h1>
+    </div>
+    <h4 style="font-size: 28px; margin: 20px auto;">PICKUP AND DEPARTURE TIMES</h4>
+    <div style="padding: 0 8px; max-width: 750px; margin: auto">
+        <div>The shuttle will depart from the Hilton to Covenant Presbyterian at the following times:</div>
+        <div style="margin: 10px auto 15px auto; font-size: 18px"><strong>4:00 PM, 4:15 PM, 4:30 PM, 4:45 PM, 5:00 PM</strong></div>
+        <div>Dilworth Neighborhood Bar & Grill is across the street from the church for those who want to head over early!</div>
+        <div style="margin: 10px auto 60px auto">The shuttle will be available from The Big Chill to the Hilton starting at 9:00 PM, but we hope you'll stay until our send-off at 11:00 PM!</div>
+    </div>
+    <h4 style="font-size: 28px; margin: 20px auto;">DIRECTIONS FROM THE HILTON</h4>
+    <div style="max-width: 750px; margin: auto; font-size: 16px; padding: 10px;">
+        <p style="margin-bottom: 30px">The bus will pick up on the backside of the Hilton – it is less than a minute walk upon exiting the hotel.</p>
+        <ol style="text-align: left; padding-left: 20px">
+            <li>Walk past the escalators on the second floor and take the Convention Center exit.</li>
+            <div style="display: table; margin: 10px 0 10px -20px;">
+                <div class="instructions-container">
+                    <%= image_tag "instructions_1.jpg" %>
+                </div>
+                <div class="instructions-container">
+                    <%= image_tag "instructions_2.jpg" %>
+                </div>
+            </div>
+            <li>Take a right once you exit towards the Convention Center, then follow the magic carpet! The bus will be waiting on E. MLK Jr. Blvd adjacent to the Convention Center.</li>
+            <div style="display: table; margin: 10px 0 30px -20px;">
+                <div class="instructions-container">
+                    <%= image_tag "instructions_3.jpg" %>
+                </div>
+                <div class="instructions-container">
+                    <%= image_tag "instructions_4.jpg" %>
+                </div>
+            </div>
+        </ol>
+        <div style="width: 100%; height: 1px; background-color: #ccc; margin-bottom: 40px"></div>
+        <div style="margin-bottom: 50px; border: 1px solid #ccc;">
+            <div id="gmap"></div>
+        </div>
+    </div>
+    <footer>Site created by Brian Yates <%= emojify ":nerd_face:", img_attrs: { title: nil }, class_name: "footer-emoji dib" %></footer>
+</div>
+<script>
+document.title = "Shuttle Service | Kirby and Brian's Wedding";
+$(document).on('turbolinks:load',function(){
+	var ico = {
+		path: 'M488 128h-8V80c0-44.8-99.2-80-224-80S32 35.2 32 80v48h-8c-13.25 0-24 10.74-24 24v80c0 13.25 10.75 24 24 24h8v160c0 17.67 14.33 32 32 32v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h192v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h6.4c16 0 25.6-12.8 25.6-25.6V256h8c13.25 0 24-10.75 24-24v-80c0-13.26-10.75-24-24-24zM112 400c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm16-112c-17.67 0-32-14.33-32-32V128c0-17.67 14.33-32 32-32h256c17.67 0 32 14.33 32 32v128c0 17.67-14.33 32-32 32H128zm272 112c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z',
+		fillOpacity: .9,
+		scale: .08,
+		strokeColor: '#000',
+        fillColor: "#4d6f9c",
+		origin: new google.maps.Point(0, 0),
+		anchor: new google.maps.Point(16, 28)
+	};
+	var m = {};
+	var l = [["Bus Pickup Area", 35.2230351, -80.8443421],
+	["Hilton Charlotte Center City", 35.2234325,-80.8435558]];
+	var map = new google.maps.Map(document.getElementById('gmap'), {center: new google.maps.LatLng(35.2232529,-80.8439649), zoom: 18});
+	for (var i = 0; i < l.length; i++) {
+		m[i] = {};
+		var loc = l[i];
+		m[i]["w"] = new google.maps.InfoWindow({content: '<div class="info-window"><div class="info-name">'+loc[0]+'</div></div>'});
+		if(i===0){
+            var marker = new google.maps.Marker({
+                position: {lat: loc[1], lng: loc[2]},
+                icon: ico,
+                map: null, 
+                animation: google.maps.Animation.DROP,
+            });
+        }
+        else{
+            var marker = new google.maps.Marker({
+                position: {lat: loc[1], lng: loc[2]},
+                map: null, 
+                animation: google.maps.Animation.DROP,
+            });
+        }
+		m[i]["m"] = marker;
+	}
+    Object.keys(m).forEach(function(key){
+        m[key]["m"].setMap(map);
+        m[key]["m"].animation = google.maps.Animation.DROP;
+        m[key]["w"].open(map, m[key]["m"]);
+        m[key]["m"].addListener('click', function() {
+            m[key]["w"].open(map, m[key]["m"]);
+        });
+    });
+});
+</script>

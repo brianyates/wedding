@@ -1,0 +1,28 @@
+$('#result-container').remove();
+<% if @success_bool %>
+  $('div#overlay').append('<%= j render "rsvp_success" %>');
+  $('div#overlay').fadeIn();
+<% else %>
+  $('div#overlay').append('<%= j render "rsvp_failure" %>');
+  $('div#overlay').fadeIn();
+<% end %>
+$('form#new_rsvp input').val("");
+$('input#rsvp_plus_one').val("false");
+$('input#rsvp_attending_value').val("");
+$('div#alerts p').replaceWith('<p></p>');
+$('div#plus-one-wrapper').removeClass("checked");
+$('label.radio').removeClass('checked');
+$('label.radio').removeClass('not-checked');
+if ($('.checkbox-wrapper.collapse').is(":visible")) {
+	$('.checkbox-wrapper.collapse').collapse('hide');
+}
+if ($('.so-fields-wrapper.collapse').is(":visible")) {
+	$('.so-fields-wrapper.collapse').collapse('hide');
+}
+$('.radio-inline input').prop("checked", false);
+$('a#confirm').click(function(){
+  $('div#rsvp-result').remove();
+  $('div#overlay').fadeOut();
+});
+$('input#submit-rsvp').removeClass("disabled");
+$('input#submit-rsvp').attr("value", "Submit RSVP");

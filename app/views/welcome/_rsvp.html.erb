@@ -1,0 +1,69 @@
+<section id="rsvp">
+  <h1 class="slideanim">RSVP</h1>
+	<div class="row">
+	  <div class="col-sm-12 text-center">
+		<div id="rsvp-container" class="slideanim">
+			<h4>See you there?</h4>
+			<%= form_for(Rsvp.new, :method => :post, :remote => true, :url => url_for(:controller => 'rsvps', :action => 'create')) do |f| %>
+			  <div class="field-wrapper">
+				<%= f.label :first_name, "First name:" %><br>
+				<%= f.text_field :first_name, class:"text-input", autocomplete:"off", autocorrect:"off", spellcheck:"false" %>
+			  </div>
+			  <div class="field-wrapper">
+				<%= f.label :last_name, "Last name:" %><br>
+				<%= f.text_field :last_name, class:"text-input", autocomplete:"off", autocorrect:"off", spellcheck:"false" %>
+			  </div>
+			  <p id="attending-label">Attending?</p>
+			  <div class="radio-container text-left">
+			    <div class="radio">
+				  <label for="rsvp_attending_true" class="radio" id="attend">
+					  <div class="radio-replacement">
+						<div class="emoji-container">
+						  <%= emojify ":grinning:", img_attrs: { title: nil } %>
+						</div>
+					  </div>
+					  <%= f.radio_button :attending, true %>I'll be there!
+				  </label>
+				</div>
+				<div class="radio">
+				  <label for="rsvp_attending_false" class="radio" id="decline">
+					  <div class="radio-replacement">
+						<div class="emoji-container">
+						  <%= emojify ":cry:", img_attrs: { title: nil } %>
+						</div>
+					  </div>
+					  <%= f.radio_button :attending, false %>Can't make it
+				  </label>
+			    </div>
+			  </div>
+			  <div class="checkbox-wrapper collapse">
+			    <div id="plus-one-wrapper">
+					<div class="checkbox-replacement">
+					  <div class="emoji-container">
+						<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+					  </div>
+					</div>
+					<p>I have a plus one</p>
+				</div>
+			  </div>
+			  <div class="so-fields-wrapper collapse">
+				  <div class="field-wrapper">
+					<%= f.label :so_first_name, "Partner's first name:" %><br>
+					<%= f.text_field :so_first_name, class:"text-input", autocomplete:"off", autocorrect:"off", spellcheck:"false" %>
+				  </div>
+				  <div class="field-wrapper">
+					<%= f.label :so_last_name, "Partner's last name:" %><br>
+					<%= f.text_field :so_last_name, class:"text-input", autocomplete:"off", autocorrect:"off", spellcheck:"false" %>
+				  </div>
+			  </div>
+			  <div id="alerts"><p></p></div>
+			  <%= f.hidden_field :attending_value %>
+			  <%= f.hidden_field :plus_one %>
+			  <div class="field-wrapper">
+				<%= f.submit "Submit RSVP", id:"submit-rsvp" %>
+			  </div>
+			<% end %>
+		</div>
+	  </div>
+	</div>
+</section>

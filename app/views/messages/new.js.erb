@@ -1,0 +1,56 @@
+$('#result-container').replaceWith('<%= j render "message" %>');
+$('#close').click(function(){
+	$('#overlay').fadeOut(300, function(){
+		$('#result-container').replaceWith('<%= j render "layouts/waiting" %>');
+	});
+});
+
+
+$("textarea#message-value").keyup(function(){
+  var messageLength = $(this).val().length;
+  var charsRemain = 250 - messageLength;
+  if (charsRemain < 0){
+    $('#send-message-btn').attr("disabled", true);
+    $("div#message-alerts p#count").replaceWith("<p id='count' class='warning'>" + charsRemain + "</p>");
+  }
+  else if (charsRemain < 10){
+    $('#send-message-btn').attr("disabled", false);
+    $("div#message-alerts p#count").replaceWith("<p id='count' class='warning'>" + charsRemain + "</p>");
+  }
+  else {
+    $('#send-message-btn').attr("disabled", false);
+    $("div#message-alerts p#count").replaceWith("<p id='count'>" + charsRemain + "</p>");
+  }
+});
+
+
+$('input#send-message-btn').click(function(e){
+    e.preventDefault();
+	var nameLength = $('input#name-value').val().length;
+	var messageLength = $('textarea#message-value').val().length;
+	if (nameLength === 0) {
+	  $('div#name-alerts p').replaceWith("<p><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Don't forget to enter your name!</p>");
+	  $('input#name-value').focus();
+	  $('input#name-value').on('change',function(){
+		  var firstName = $('input#name-value').val().length;
+		  if (firstName > 0) {
+			  $('div#name-alerts p').replaceWith("<p></p>");
+		  }
+	  });
+	}
+	else if (messageLength === 0) {
+	  $('div#blank-alerts p').replaceWith("<p><i class='fa fa-exclamation-circle' aria-hidden='true'></i> Messages can't be blank!</p>");
+	  $('textarea#message-value').focus();
+	  $('textarea#message-value').keyup(function(){
+		  var messageLength = $('textarea#message-value').val().length;
+		  if (messageLength > 0) {
+			  $('div#blank-alerts p').replaceWith("<p></p>");
+		  }
+      });
+	}
+	else {
+	  $('form#new_message').submit();
+	  $('input#send-message-btn').addClass("disabled");
+	  $('input#send-message-btn').attr("value", "Sending...");
+	}
+});

@@ -1,0 +1,33 @@
+<% if @attending == "true" %>
+  <% if @plus_one == "true" %>
+	<div id="result-container">
+		<h2>
+			<%= emojify ":couple:", img_attrs: { title: nil } %>
+			Success!
+			<%= emojify ":couple:", img_attrs: { title: nil } %>
+		</h2>
+		<p>Thank you for confirming your attendance at Brian and Kirby's wedding, <%= params[:rsvp][:first_name] %>. We can't wait to see you and <%= params[:rsvp][:so_first_name] %> there!</p>
+		<a id="confirm">OK</a>
+	</div>
+  <% else %>
+	<div id="result-container">
+		<h2>
+			<%= emojify ":couple:", img_attrs: { title: nil } %>
+			Success!
+			<%= emojify ":couple:", img_attrs: { title: nil } %>
+		</h2>
+		<p>Thank you for confirming your attendance at Brian and Kirby's wedding, <%= params[:rsvp][:first_name] %>. We can't wait to see you there!</p>
+		<a id="confirm">OK</a>
+	</div>
+  <% end %>
+<% else %>
+	<div id="result-container">
+		<h2>
+			<%= emojify ":cry:", img_attrs: { title: nil } %>
+			Declined
+			<%= emojify ":cry:", img_attrs: { title: nil } %>
+		</h2>
+		<p>Thank you for confirming that you won't be able to attend our wedding. We're bummed you can't make it, <%= params[:rsvp][:first_name] %>.</p>
+		<a id="confirm">OK</a>
+	</div>
+<% end %>

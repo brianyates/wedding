@@ -1,0 +1,18 @@
+<% if @success_bool %>
+	$('#messages-container').prepend('<%= j render "new_message" %>');
+	$('body').prepend('<div id="flash-container" class="good-notice"><p>Message posted!</p>');
+	$('#overlay').fadeOut(300);
+<% else %>
+	$('body').prepend('<div id="flash-container" class="bad-notice"><p>Error creating message; try again later.</p>');
+	$('#overlay').fadeOut(300);
+<% end %>
+$("#flash-container").slideDown(200, function(){
+	setTimeout(function(){ 
+		$("#flash-container").fadeOut("slow", function() { 
+			$("#flash-container").remove(); 
+		}); 
+	}, 4000);
+});
+$('input#send-message-btn').removeClass("disabled");
+$('input#send-message-btn').attr("value", "Send");
+$('html, body').animate({scrollTop: $('#messages').offset().top - 10}, 800);

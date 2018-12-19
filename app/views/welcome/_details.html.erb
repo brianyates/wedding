@@ -1,0 +1,185 @@
+<section id="wedding-details">
+	<h1 class="slideanim">Details</h1>
+	<div class="top-details slideanim not-ie">
+		<h3>October 27th, 2018 <i style="padding: 0 5px" class="fa fa-heart" aria-hidden="true"></i> Charlotte, NC</h3>
+		<% if Date.today == '2018-10-27'.to_date %>
+			<p>Today is the day!</p>
+		<% elsif ("2018-10-27".to_date - Date.today).to_i < 0 %>
+			<p>The day has come!</p>
+		<% else %>
+			<p>Only <%= pluralize((("2018-10-27".to_date - Date.today).to_i), "more day") %>!</p>
+		<% end %>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 slideanim">
+			<p class="alert-msg">We are very excited to have you visit our home city of Charlotte, NC! Uptown Charlotte is located 15 minutes away from Charlotte Douglas International Airport. Uber and Lyft are available for your transportation needs - a guest shuttle will also be provided from the Hilton for the wedding.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 slideanim">
+			<div class="cocktail-container">
+				<div style="padding-bottom: 20px">
+					<%= image_tag "party.png", width: '100%' %>
+				</div>
+				<p style="font-size: 20px; max-width: 400px; margin: 0 auto 20px auto">We hope you'll join us for a welcome party on Friday night at the Hilton!</p>
+				<table>
+					<tbody>
+						<tr>
+							<td class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></td>
+							<td>Friday, October 26th at 9:00 PM</td>
+						</tr>
+						<tr>
+							<td class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+							<td>
+								<div>Salon Coastal Bar - 2nd floor of Hilton Charlotte Center City</div>
+								<div>222 E 3rd St, Charlotte, NC 28202</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="row no-marg">
+		<div class="col-sm-6 no-pad slideanim">
+			<div class="details-container">
+				<h2>Ceremony</h2>
+				<h4><strong>Covenant Presbyterian Church</strong></h4>
+				<%= image_tag "church.jpg", class: "img-rounded details-image" %>
+				<div class="detail-info text-left">
+					<table>
+						<tbody>
+							<tr>
+								<td class="icon"><i class="fa fa-clock-o text-success" aria-hidden="true"></i></td>
+								<td>Ceremony begins at 5:30 PM</td>
+							</tr>
+							<tr>
+								<td class="icon"><i class="fa fa-car text-warning" aria-hidden="true"></i></td>
+								<td>Parking is free - cars left in the church parking lot will need to be retrieved by 8 AM on Sunday</td>
+							</tr>
+							<tr>
+								<td class="icon"><i class="fa fa-bus text-info" aria-hidden="true"></i></td>
+								<td>Guest shuttle will drop off at this location</td>
+							</tr>
+							<tr>
+								<td class="icon"><i class="fa fa-map-marker text-danger" aria-hidden="true"></i></td>
+								<td>
+								<div>1000 E Morehead St, Charlotte, NC 28204</div>
+								<ul><li>The church is located 1 mile from Uptown Charlotte</li></ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<a class="styled" href="http://www.covenantpresby.org/" rel="noopener noreferrer" target="_blank"><i class="fa fa-heart" aria-hidden="true"></i> View Website</a>
+			</div>
+		</div>
+		<div class="col-sm-6 no-pad slideanim">
+			<div class="details-container">
+				<h2>Reception</h2>
+				<h4><strong>The Big Chill</strong></h4>
+				<%= image_tag "reception.jpg", class: "img-rounded details-image" %>
+				<div class="detail-info text-left">
+					<table>
+						<tbody>
+							<tr>
+								<td class="icon"><i class="fa fa-clock-o text-success" aria-hidden="true"></i></td>
+								<td>Reception will begin immediately after the ceremony</td>
+							</tr>
+							<tr>
+								<td class="icon"><i class="fa fa-car text-warning" aria-hidden="true"></i></td>
+								<td>Parking is free - we encourage you to park your cars here if you plan to leave your car overnight</td>
+							</tr>
+							<tr>
+								<td class="icon"><i class="fa fa-bus text-info" aria-hidden="true"></i></td>
+								<td>Guest shuttle will pick up from this location</td>
+							</tr>
+							<tr>
+								<td class="icon"><i class="fa fa-map-marker text-danger" aria-hidden="true"></i></td>
+								<td>
+								<div>911 E Morehead St, Charlotte, NC 28204</div>
+								<ul><li><strong>The reception is located directly across the street from the church - please use the crosswalk when walking over!</strong></li></ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<a class="styled" href="https://www.thebigchillcharlotte.com/" rel="noopener noreferrer" target="_blank"><i class="fa fa-glass" aria-hidden="true"></i> View Website</a>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div style="max-width: 750px; margin: 10px auto 40px auto">
+				<h2 class="slideanim other-head" style="border-bottom: 1px solid #ddd; margin-bottom: 20px"><i class="fa fa-bus text-info" aria-hidden="true"></i> Guest Shuttle</h2>
+				<div>We are happy to provide a guest shuttle for our wedding. The shuttle will depart from the Hilton to Covenant Presbyterian at the following times:</div>
+				<div style="margin: 10px auto 15px auto; font-size: 18px"><strong>4:00 PM, 4:15 PM, 4:30 PM, 4:45 PM, 5:00 PM</strong></div>
+				<div>Dilworth Neighborhood Bar & Grill is across the street from the church for those who want to head over early!</div>
+				<div style="margin: 10px auto 20px auto">The shuttle will be available from The Big Chill to the Hilton starting at 9:00 PM, but we hope you'll stay until our send-off at 11:00 PM!</div>
+				<a href="/shuttle-service" class="btn btn-shuttle" data-turbolinks="false">Click here for schedule and location details</a>
+			</div>
+		</div>
+	</div>
+	<div class="maps-container slideanim">
+		<div id="gmap"></div>
+	</div>
+</section>
+<script>
+$(document).on('turbolinks:load',function(){
+	var ico = {
+		path: 'M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z',
+		fillOpacity: .6,
+		scale: 1.2,
+		strokeColor: '#000',
+		origin: new google.maps.Point(0, 0),
+		anchor: new google.maps.Point(16, 28)
+	};
+	var bounds = new google.maps.LatLngBounds();
+	var m = {};
+	var l = [["Covenant Presbyterian Church", "1000 E Morehead St, Charlotte, NC 28204", 35.2120493,-80.8436386, "#1f5396"], 
+	["The Big Chill", "911 E Morehead St, Charlotte, NC 28204", 35.213420, -80.843577, "#b7103d"],
+	["Hilton Charlotte Center City", "222 E 3rd St, Charlotte, NC 28202",35.2239184,-80.8438531,"#e48c04"],
+	["Courtyard by Marriott Charlotte City Center", "237 S Tryon St, Charlotte, NC 28202", 35.2256223,-80.8447303, "#09c510"],
+	["Hilton Garden Inn Charlotte Uptown", "508 East Martin Luther King Jr. Boulevard, Charlotte, NC 28202", 35.2207926,-80.8428136, "#9850a0"],
+	["Four Points by Sheraton Charlotte", "315 E Woodlawn Rd, Charlotte, NC 28217",35.1788697,-80.8785744,"#10aeb7"],
+	["Charlotte Douglas International Airport", "5501 Josh Birmingham Pkwy, Charlotte, NC 28208", 35.2143873,-80.9473926, "#333"]]
+	var map = new google.maps.Map(document.getElementById('gmap'));
+	for (var i = 0; i < l.length; i++) {
+		m[i] = {};
+		var loc = l[i];
+		m[i]["w"] = new google.maps.InfoWindow({content: '<div class="info-window"><div class="info-name">'+loc[0]+'</div><div class="info-address">'+loc[1]+'</div></div>'});
+		ico.fillColor = loc[4];
+		if (i===6){
+			ico.path = "M48.049 36.31c.523.169.951-.142.951-.692v-3.494c0-.55-.387-1.23-.859-1.512l-18.282-10.895c-.472-.281-.859-.962-.859-1.511v-12.206c0-.55-.168-1.417-.374-1.928 0 0-1.091-2.708-3-3.01-.204-.036-.411-.062-.619-.062h-.01c-.241-.002-.479.028-.713.072l-.216.048-.328.102c-1.588.53-2.406 2.835-2.406 2.835-.184.519-.334 1.393-.334 1.943v12.206c0 .55-.387 1.23-.859 1.512l-18.282 10.894c-.472.282-.859.962-.859 1.512v3.494c0 .55.428.861.951.691l18.098-5.875c.523-.169.951.142.951.692v9.533c0 .55-.36 1.271-.8 1.601l-2.4 1.802c-.44.33-.8 1.051-.8 1.601v2.337c0 .55.433.876.961.724l6.075-1.745c.528-.152 1.394-.152 1.922 0l6.081 1.745c.528.152.961-.174.961-.724v-2.338c0-.55-.36-1.271-.8-1.601l-2.4-1.802c-.439-.33-.8-1.051-.8-1.601v-9.533c0-.55.428-.861.951-.691l18.098 5.876z";
+			ico.scale = 1;
+		}
+		var marker = new google.maps.Marker({
+			position: {lat: loc[2], lng: loc[3]},
+			icon: ico,
+			map: null, 
+			animation: google.maps.Animation.DROP,
+		});
+		bounds.extend(marker.getPosition());
+		m[i]["m"] = marker;
+	}
+	map.fitBounds(bounds);
+	var d = true;
+	$(window).scroll(function() {
+		if(d){
+			var p = $('#gmap').offset().top;
+			var wTop = $(window).scrollTop();
+			if (p < wTop + 600) {
+				d = false;
+				Object.keys(m).forEach(function(key){
+					m[key]["m"].setMap(map);
+					m[key]["m"].animation = google.maps.Animation.DROP;
+					m[key]["w"].open(map, m[key]["m"]);
+					m[key]["m"].addListener('click', function() {
+						m[key]["w"].open(map, m[key]["m"]);
+					});
+				});
+			}
+		}
+	});
+});
+</script>

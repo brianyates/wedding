@@ -1,0 +1,18 @@
+<section id="messages">
+	<h1>Messages</h1>
+	<%= link_to raw('<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Post a message for Brian and Kirby!'), "/messages/new", remote: true, id:"create-message" %>
+	<% if @messages.length > 0 %>
+		<div id="messages-container">
+			<% @messages.each do |mes| %>
+				<div class="message">
+					<div class="message-header text-left">
+						<p class="name"><%= mes.name %> wrote:</p><p class="timestamp"><%= time_ago_in_words(mes.created_at) %> ago</p>
+					</div>
+					<p class="main-message"><%= mes.message %></p>
+				</div>
+			<% end %>
+		</div>
+	<% else %>
+		<div class="top-pad"></div>
+	<% end %>
+</section>

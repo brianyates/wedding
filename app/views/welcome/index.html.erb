@@ -1,0 +1,89 @@
+<div id="background"></div>
+<div id="overlay">
+	<div id="result-container">
+		<div class="waiting-container">
+			<i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Waiting...</span>
+		</div>
+	</div>
+</div>
+<div id="photo-modal">
+	<div id="close-photos"><i class="fa fa-times"></i></div>
+	<div class="photo-container">
+		<div id="engagement-carousel" class="carousel text-center" data-interval="false">
+			<div class="carousel-inner">
+				<a id="engagement-target" href="/get-photos" data-remote="true"></a>
+			</div>
+			<a class="left carousel-control ec" href="#engagement-carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control ec" href="#engagement-carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+</div>
+<div id="menu-overlay"></div>
+<div id="menu">
+	<a id="close-menu">Close</a>
+	<div class="menu-img-container">
+		<a href="#home" class="main-menu"><%= image_tag "logo_pic.jpg", class: "img-circle" %></a>
+	</div>
+	<div class="menu-container">
+		<a class="main-menu" href="#our-story"><div class="icon-container"><i class="fa fa-book" aria-hidden="true"></i></div>OUR STORY</a>
+		<a class="main-menu" href="#wedding-details"><div class="icon-container"><i class="fa fa-info-circle" aria-hidden="true"></i></div>DETAILS</a>
+		<a href="/shuttle-service" data-turbolinks="false"><div class="icon-container"><i class="fa fa-bus" aria-hidden="true"></i></div>SHUTTLE SERVICE</a>
+		<a class="main-menu" href="#wedding-party"><div class="icon-container"><i class="fa fa-users" aria-hidden="true"></i></div>WEDDING PARTY</a>
+		<!--<a class="main-menu" href="#rsvp"><div class="icon-container"><i class="fa fa-address-card-o" aria-hidden="true"></i></div>RSVP</a></li> -->
+		<a class="main-menu" href="#photos"><div class="icon-container"><i class="fa fa-photo" aria-hidden="true"></i></div>PHOTOS</a>
+		<a class="main-menu" href="#things-to-do"><div class="icon-container"><i class="fa fa-binoculars" aria-hidden="true"></i></div>THINGS TO DO</a>
+		<a class="main-menu" href="#accomodations"><div class="icon-container"><i class="fa fa-building-o" aria-hidden="true"></i></div>ACCOMODATIONS</a>
+		<a class="main-menu" href="#registry"><div class="icon-container"><i class="fa fa-gift" aria-hidden="true"></i></div>REGISTRY</a>
+		<a class="main-menu" href="#messages"><div class="icon-container"><i class="fa fa-pencil" aria-hidden="true"></i></div>MESSAGES</a>
+	</div>
+</div>
+<div id="nav" class="home-nav">
+	<button id="menu-btn">
+		<div>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div id="menu-text">Menu</div>
+	</button>
+	<div class="nav-text">Kirby & Brian 2018</div>
+</div>
+<div id="home" class="not-ie">
+	<div id="slide-down-container">
+		<a id="slide-down-link">
+			<div class="bounce main-font">
+				<p>Y'all come on in!</p>
+				<i class="fa fa-heart" aria-hidden="true"></i>
+			</div>
+		</a>
+	</div>
+</div>
+<div class="main-container">
+	<%= render partial: "our_story" %>
+	<%= render partial: "details" %>
+	<%= render partial: "wedding_party" %>
+	<%= render partial: "rsvp" %>
+	<section id="photos">
+		<h1 class="slideanim">Engagement Photos</h1>
+		<div class="row slideanim">
+			<div class="col-sm-12 text-center">
+				<a data-toggle="modal" class="collage-btn">
+					<%= image_tag "collage.jpg" %>
+					<div class="collage-overlay">Click to View All Photos</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	<%= render partial: "things_to_do" %>
+	<%= render partial: "accomodations" %>
+	<%= render partial: "registry" %>
+	<%= render partial: "messages" %>
+	<footer>Site created by Brian Yates <%= emojify ":nerd_face:", img_attrs: { title: nil }, class_name: "footer-emoji dib" %></footer>
+</div>

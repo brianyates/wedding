@@ -1,0 +1,13 @@
+<div id="result-container">
+	<a id="close">Cancel</a>
+	<%= image_tag "story_pic_1.jpg", class: "message-img img-circle" %>
+	<h3 class="message-header">Write a message for Brian and Kirby!</h3>
+	<%= form_for(Message.new, remote: true, url: url_for(controller: 'messages', action: 'create' )) do |f| %>
+	  <div id="name-alerts" class="text-left"><p></p></div>
+	  <%= f.text_field :name, placeholder: "Enter your name", id:"name-value", autocomplete:"off", autocorrect:"off", spellcheck:"false" %>
+	  <div id="blank-alerts" class="text-left"><p></p></div>
+	  <%= f.text_area :message, placeholder: "Write your message...", rows: 8, id:"message-value" %>
+	  <div id="message-alerts"><p id="count">250</p><p>characters remaining</p></div>
+	  <%= f.submit "Send", id: "send-message-btn" %>
+	<% end %>
+</div>

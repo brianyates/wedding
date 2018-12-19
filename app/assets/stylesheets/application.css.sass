@@ -1,0 +1,944 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets"
+@import "bootstrap"
+
+html, body
+	width: 100%
+	height: 100%
+	font-family: 'Raleway', sans-serif
+	
+section
+	padding: 54px 0 10px 0
+	
+a
+	text-decoration: none !important
+	
+.row
+	padding: 10px 0
+	
+h1
+	font-family: "Rochester", cursive
+	margin: 0 5% 30px 5%
+	border-bottom: 1px solid #ddd
+	font-size: 56px
+	
+h3
+	font-family: "Dancing Script", cursive
+	font-size: 28px
+	
+#nav
+	top: 0
+	left: 0
+	right: 0
+	position: fixed
+	z-index: 3
+	height: 50px
+	text-align: center
+	color: #fff
+	background-color: transparent
+	line-height: 50px
+	font-size: 70px
+	transition: all .3s
+	
+#nav.scrolled
+	background-color: rgba(67, 91, 125, 0.82)
+	box-shadow: 0px 1px 2px 0 #000
+	font-size: 40px
+	
+#nav .nav-text
+	cursor: default
+	font-family: "Dancing Script", cursive
+	margin-top: 100px
+	display: inline-block
+	transition: margin .3s
+#nav.scrolled .nav-text
+	margin-top: 0
+@media all and (max-width: 600px) and (min-width: 421px)
+	#nav, nav.scrolled
+		font-size: 36px
+	#nav.scrolled #menu-text
+		visibility: hidden
+@media all and (max-width: 420px)
+	#nav
+		font-size: 36px
+	#nav.scrolled
+		font-size: 24px
+	#nav.scrolled #menu-text
+		visibility: hidden
+#menu
+	position: fixed
+	width: 280px
+	margin-left: -280px
+	background: #1e3963
+	background: -webkit-linear-gradient(#1e3963, #54748c)
+	background: linear-gradient(#1e3963, #54748c)
+	height: 100%
+	z-index: 999
+	overflow-y: auto
+	
+#menu .menu-container a
+	display: block
+	text-decoration: none
+	width: 100%
+	font-size: 18px
+	padding-top: 10px
+	padding-bottom: 10px
+	padding-right: 50px
+	padding-left: 0
+	color: #d2e8ea
+	transition: all .3s
+#menu .menu-container a .icon-container
+	opacity: 0
+	transition: all .3s
+	color: #fff
+	display: inline-block
+	width: 50px
+	float: left
+.icon
+	width: 20px
+	vertical-align: top
+.bigger-icon
+	width: 23px
+	vertical-align: top
+.details-container ul
+	padding: 0 0 0 15px
+	margin: 0
+.smaller
+	font-size: 12px
+#menu .menu-container a:hover
+	background-color: #1b304e
+	color: #fff
+	padding-right: 30px
+#menu .menu-container a:hover .icon-container
+	opacity: 1
+	width: 30px
+#menu .menu-img-container
+	padding: 25px 0
+	text-align: center
+#menu img
+	width: 150px
+	height: 150px
+.menu-container
+	text-align: center
+@media all and (max-width: 768px)
+	#menu img
+		width: 125px
+		height: 125px
+	.hide-me
+		display: none
+#close-menu    
+	color: #cacaca
+	font-size: 10px
+	cursor: pointer
+	margin: 2px 0 0 2px
+	position: absolute
+#menu-btn
+	background: none
+	border: none
+	font-size: 18px
+	outline: none
+	position: absolute
+	padding: 1px 0
+	left: 5px
+#menu-btn div
+	display: inline-block
+	vertical-align: top
+
+#menu-btn div:nth-child(1)
+	padding-top: 13px
+	width: 36px
+	
+#menu-btn div span
+	width: 30px
+	height: 4px
+	margin-bottom: 5px
+	display: block
+	background-color: #fff
+	
+#menu-btn div span:nth-child(3)
+	margin-bottom: 0
+#menu-btn:hover div span:nth-child(1)
+	margin-left: 4px
+#menu-btn:hover div span:nth-child(2)
+	margin-left: 2px
+#background
+	position: fixed
+	background: -webkit-linear-gradient(#f1f1f1,#e5eeff)
+	background: linear-gradient(#f1f1f1,#e5eeff)
+	z-index: 1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+.main-container
+	margin: auto
+	max-width: 1200px
+	z-index: 2
+	background-color: #fff
+	position: relative
+	text-align: center
+footer
+	width: 100%
+	padding: 10px 5px
+	background-color: #e5eeff
+	color: #333
+.footer-emoji
+	height: 20px
+	width: 20px
+.dib
+	display: inline-block
+#image-spacer
+	width: 100%
+	height: 100%
+#home
+	background-image: url("home.jpg")
+	background-size: cover
+	background-position: top
+	background-repeat: no-repeat
+	position: relative
+	z-index: 2
+	height: 100%
+	width: 100%
+div#slide-down-container
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	text-align: center
+	width: 100%
+	padding-bottom: 10px
+a#slide-down-link
+	color: #fff
+	cursor: pointer
+	display: block
+	width: 90px
+	margin: auto
+a#slide-down-link p
+	margin: 0
+	font-size: 11px
+a#slide-down-link i
+	font-size: 26px
+div.bounce
+	animation: bounce 2s infinite
+	-webkit-animation: bounce 2s infinite
+	-moz-animation: bounce 2s infinite
+	-o-animation: bounce 2s infinite
+@keyframes bounce
+	0%, 20%, 50%, 70%, 90%, 100%
+		transform: translateY(0)
+	40%
+		transform: translateY(-30px)
+	60%
+		transform: translateY(-15px)
+	80%
+		transform: translateY(-5px)
+@-webkit-keyframes bounce
+	0%, 20%, 50%, 70%, 100%
+		transform: translateY(0)
+	40%
+		transform: translateY(-30px)
+	60%
+		transform: translateY(-15px)
+	80%
+		transform: translateY(-5px)
+.story-img-container, .story-image
+	margin: auto
+	width: 500px
+	height: 500px
+.story-img-container
+	margin-bottom: 10px
+.story-text
+	line-height: 28px
+	padding: 0 20px
+@media all and (min-width: 768px)
+	.story-img-container.left-ct
+		float: left
+	.story-img-container.right-ct
+		float: right
+	.story-img-container
+		margin: 70px 40px 0 40px
+	.story-text
+		padding: 0 40px
+@media all and (max-width: 525px) and (min-width: 451px)
+	.story-img-container, .story-image
+		width: 400px
+		height: 400px
+@media all and (max-width: 450px) and (min-width: 350px)
+	.story-img-container, .story-image
+		width: 325px
+		height: 325px
+@media all and (max-width: 349px)
+	.story-img-container, .story-image
+		width: 250px
+		height: 250px
+.story-image.front-img
+	position: absolute
+	opacity: 1
+	transition: opacity .4s
+.story-image.front-img.hide-img
+	opacity: 0
+.row
+	margin: 0
+.no-pad
+	padding: 0
+.slideanim
+	visibility: hidden
+.slider
+	animation-name: slider
+	-webkit-animation-name: slider
+	animation-duration: 1s
+	-webkit-animation-duration: 1s
+	visibility: visible
+@keyframes slider
+	0%
+		opacity: 0
+		transform: translateY(70%)
+	100%
+		opacity: 1
+		transform: translateY(0%)
+@-webkit-keyframes slider
+	0%
+		opacity: 0
+		-webkit-transform: translateY(70%)
+	100%
+		opacity: 1
+		-webkit-transform: translateY(0%)
+.top-details
+	border: 2px solid #8e8e8e
+	border-radius: 20px
+	padding: 2px
+	margin: 10px 1% 20px 1%
+	background-image: url("td.jpg")
+	background-size: cover
+	background-position: top
+	background-repeat: no-repeat
+	color: #fff
+	text-shadow: 1px 1px black
+@media all and (min-width: 768px)
+	.top-details.not-ie, #home.not-ie
+		background-attachment: fixed
+.details-image, .detail-info
+	width: 95%
+	max-width: 500px
+	margin: auto
+	margin-bottom: 10px
+.details-image
+	max-width: 400px
+.detail-info
+	padding: 5px 0 0 0
+.detail-info td, .hotel-info td
+	padding: 5px 0
+.hotel-info td div
+	margin-bottom: 2px
+@media all and (min-width: 850px)
+	.detail-info
+		height: 220px
+@media all and (min-width: 768px) and (max-width: 849px)
+	.detail-info
+		height: 260px
+.top-details h3
+	margin-bottom: 20px
+@media all and (max-width: 450px)
+	.top-details h3
+		font-size: 18px
+.details-container
+	border: 1px solid #bbb
+	border-radius: 5px
+	margin: 5px 10px 10px 10px
+	padding: 2px
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12)
+.details-container h2
+	margin: 0 15% 15px 15%
+	border-bottom: 1px solid #ddd
+.details-container p
+	margin-bottom: 8px
+.details-container a.styled
+	display: block
+	background-color: rgb(67, 91, 125)
+	color: #fff
+	border-radius: 5px
+	padding: 10px
+	width: 95%
+	max-width: 500px
+	margin: auto
+	margin-top: 10px
+	margin-bottom: 10px
+.details-container a i
+	padding-right: 5px
+.big
+	font-size: 16px
+.details-container a:hover
+	background-color: #00a1c3
+.details-container .hotel-info
+	width: 95%
+	margin: auto
+	max-width: 500px
+@media all and (min-width: 1051px)
+	.details-container .hotel-info
+		height: 270px
+	.details-container .hotel-info.top-h-info
+		height: 240px
+@media all and (min-width: 955px) and (max-width: 1050px)
+	.details-container .hotel-info
+		height: 280px
+	.details-container .hotel-info.top-h-info
+		height: 250px
+@media all and (min-width: 900px) and (max-width: 954px)
+	.details-container .hotel-info
+		height: 300px
+	.details-container .hotel-info.top-h-info
+		height: 265px
+@media all and (min-width: 830px) and (max-width: 899px)
+	.details-container .hotel-info
+		height: 320px
+	.details-container .hotel-info.top-h-info
+		height: 285px
+	.big
+		font-size: 12px
+	.hotel-option
+		font-size: 22px
+@media all and (min-width: 768px) and (max-width: 829px)
+	.details-container .hotel-info
+		height: 320px
+	.details-container .hotel-info.top-h-info
+		height: 285px
+	.big
+		font-size: 12px
+	.hotel-option
+		font-size: 22px
+@media all and (min-width: 900px) and (max-width: 1020px)
+	.big.hotel-2
+		font-size: 14px
+		height: 22px
+	.hotel-option
+		font-size: 22px
+@media all and (min-width: 768px) and (max-width: 785px)
+	.big
+		height: 34px
+.maps-container
+	width: 100%
+	padding: 5px
+#gmap
+	height: 450px
+	width: 100%
+	margin: auto
+.party-carousel
+	padding-top: 12%
+	border: 1px solid #bbb
+	border-radius: 5px
+	margin: 5px 10px
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12)
+.party-indicators
+	width: 80%
+	margin-left: -40%
+.party-indicators a, .party-indicators a.active
+	margin: 0 1px
+	cursor: pointer
+	display: inline-block
+	width: 12%
+.party-indicators a img
+	width: 100%
+.party-indicators a
+	opacity: .3
+.party-indicators a:hover 
+	opacity: .75
+.party-indicators a.active, .party-indicators a.active:hover
+	opacity: 1
+.party-img
+	width: 60%
+	max-width: 400px
+	margin: auto
+	margin-bottom: 20px
+.carousel-control
+	background-image: none !important
+.modal-body.dark
+	background: #333
+.carousel-control.pc
+	bottom: auto
+	font-size: 24px
+	color: #000
+	text-shadow: none
+	width: 10%
+.carousel-control.pc:hover, .carousel-control.pc:focus
+	color: #000
+.party-indicators
+	top: 5px
+@media all and (min-width: 768px) and (max-width: 999px)
+	.party-carousel
+		height: 530px
+@media all and (min-width: 1000px)
+	.party-carousel
+		height: 600px
+#rsvp h1
+	letter-spacing: 4px
+
+#rsvp-container
+	border: 1px solid #afafaf
+	border-radius: 5px
+	margin-top: 0
+	margin-bottom: 30px
+	width: 95%
+	max-width: 800px
+	margin: auto
+	padding: 0 0 2% 0
+	background-color: #fff
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12)
+#rsvp-container h4
+	padding: 10px
+	font-size: 22px
+	margin-bottom: 25px
+	font-family: "Dancing Script", cursive
+div#rsvp-container form input.text-input, div#rsvp-container form select, #result-container form input[type="text"]
+	width: 100%
+	height: 40px
+	font-size: 16px
+	display: block
+	padding: 6px 12px
+	line-height: 1.428571429
+	background-color: #fff
+	background-image: none
+	border: 1px solid #ccc
+	border-radius: 4px
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6)
+	-webkit-transition: all .4s
+	transition: all .4s
+	
+#result-container form textarea
+	resize: none
+	width: 100%
+	padding: 6px 12px
+	font-size: 16px
+	border-radius: 4px
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 255, 255, 0.6)
+	-webkit-transition: all .4s
+	transition: all .4s
+	background-color: #fff
+	background-image: none
+	border: 1px solid #ccc
+	margin-bottom: 20px
+	
+div#rsvp-container form input.text-input:focus, div#rsvp-container form select:focus, #result-container form input[type="text"]:focus, #result-container form textarea:focus
+	transition: all .4s
+	border-color: #66afe9
+	outline: 0
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
+	
+div#rsvp-container form input#submit-rsvp, #send-message-btn
+	background-color: #435b7d
+	border: none
+	color: #FFFFFF
+	width: 100%
+	height: 60px
+	border-radius: 30px
+	outline: none
+	transition: background-color .4s
+	padding: 2px 5px
+	font-size: 16px
+	
+#send-message-btn
+	height: 40px
+
+div#rsvp-container form input#submit-rsvp:hover, #send-message-btn:hover
+	background-color: #00a1c3
+	
+div#rsvp-container form input#submit-rsvp.disabled, form input#send-message-btn.disabled
+	background-color: #74888c
+	cursor: wait
+
+div#rsvp-container form input#plus-one-checkbox
+	width: 15px
+	height: 15px
+	vertical-align: top
+	
+div#rsvp-container div.checkbox-wrapper p
+	display: inline-block
+	padding-left: 0
+	font-size: 14px
+div#rsvp-container label.radio
+	font-size: 14px
+	margin: 0
+	padding: 10px 0
+	max-width: 200px
+div#rsvp-container label.radio:hover, div#rsvp-container label.radio.checked, div#rsvp-container label.radio.not-checked:hover
+	color: #36598a
+	font-weight: bold
+div#rsvp-container label.radio.not-checked
+	color: #aaa
+div#rsvp-container label.radio.not-checked div.radio-replacement
+	background-color: #aaa
+div#rsvp-container label.radio:hover div.radio-replacement, div#rsvp-container label.radio.checked div.radio-replacement
+	background-color: #36598a
+div#rsvp-container label.radio.checked img
+	opacity: 1
+input[type="radio"]
+	visibility: hidden
+div#plus-one-wrapper
+	max-width: 200px
+	cursor: pointer
+div#plus-one-wrapper:hover p, div#plus-one-wrapper.checked p
+	color: #36598a !important
+	font-weight: bold
+div#plus-one-wrapper:hover div.checkbox-replacement, div#plus-one-wrapper.checked div.checkbox-replacement
+	background-color: #36598a
+div#plus-one-wrapper.checked div.checkbox-replacement div.emoji-container i
+	opacity: 1
+div.radio-replacement, div.checkbox-replacement
+	height: 30px
+	position: relative
+	width: 30px
+	background-color: #000000
+	display: inline-block
+	vertical-align: middle
+	margin-right: 3px
+div.checkbox-replacement, div.checkbox-replacement p
+	background-color: #828282
+div.checkbox-replacement div.emoji-container
+	transition: background-color .3s
+div.radio-replacement, div.radio-replacement div.emoji-container
+	border-radius: 100%
+div.checkbox-replacement, div.checkbox-replacement div.emoji-container
+	border-radius: 5px
+div.radio-replacement div.emoji-container, div.checkbox-replacement div.emoji-container
+	width: 24px
+	height: 24px
+	background-color: #ffffff
+	margin: auto
+	margin-top: 3px
+div.radio-replacement div.emoji-container img
+	height: 100%
+	width: 100%
+	opacity: 0
+	transition: opacity .3s
+	border-radius: 100%
+	border: 3px solid #fff
+	margin-bottom: 1px
+div.checkbox-replacement div.emoji-container i
+	height: 100%
+	width: 100%
+	font-size: 20px
+	color: #36598a
+	opacity: 0
+	padding: 2px 0 0 3px !important
+	transition: all .3s
+@media all and (min-width: 326px)
+	div#rsvp-container label.radio
+		font-size: 16px
+	div#rsvp-container div.checkbox-wrapper p
+		font-size: 16px
+	img.rsvp-emoji
+		height: 24px
+		width: 24px
+div#rsvp-container form label
+	margin-bottom: 0
+	font-weight: normal
+div#rsvp-container div.field-wrapper, div#rsvp-container div.checkbox-wrapper
+	text-align: left
+	width: 80%
+	margin: auto
+	margin-bottom: 10px
+div.so-fields-wrapper
+	margin-bottom: 20px
+p#attending-label
+	width: 80%
+	text-align: left
+	padding: 0 0 2px 0
+	margin: auto
+div.radio-container
+	width: 80%
+	margin: auto
+	padding: 0 0 0 8px
+	border: 1px solid #ccc
+	border-radius: 5px
+	margin-bottom: 20px
+#alerts
+	color: #d40000
+	text-align: left
+	width: 80%
+	margin: auto
+	margin-top: -10px
+	height: 30px
+#result-container
+	background-color: #fff
+	border: 1px solid #ddd
+	border-radius: 5px
+	margin: auto
+	margin-top: 60px
+	width: 90%
+	max-width: 600px
+	padding: 5px
+	text-align: center
+#result-container img
+	height: 30px
+#result-container h2
+	margin-bottom: 30px
+	color: #46708e
+#result-container p
+	font-size: 22px
+#confirm
+	display: block
+	background-color: #435b7d
+	color: #fff
+	width: 70%
+	padding: 10px
+	border-radius: 30px
+	margin: 30px auto
+	font-size: 20px
+	cursor: pointer
+	transition: background-color .3s
+#confirm:hover
+	background-color: #00a1c3
+#create-message
+	background-color: #fff
+	border: 2px solid #435b7d
+	color: #435b7d
+	border-radius: 30px
+	padding: 10px
+	display: block
+	margin: auto
+	width: 50%
+	min-width: 280px
+	transition: all .3s
+#create-message:hover
+	color: #fff
+	background-color: #435b7d
+#message-alerts
+	color: #555
+	margin-top: -10px
+	margin-bottom: 10px
+#message-alerts p
+	display: inline-block
+	font-size: 13px
+	margin-right: 4px
+#message-alerts p.warning
+	color: #bf0000
+#close
+	float: right
+	color: #969696
+	font-size: 11px
+	cursor: pointer
+#close:hover
+	color: #bf0000
+h3.message-header
+	margin: 32px 5px 0 5px
+	color: #6f98a9
+	font-size: 18px
+@media all and (min-width: 380px) and (max-width: 490px)
+	h3.message-header
+		font-size: 22px
+@media all and (min-width: 491px)
+	h3.message-header
+		font-size: 28px	
+form.new_message
+	margin: 5px
+#name-alerts, #blank-alerts
+	padding-top: 5px
+	min-height: 10px
+#name-alerts
+	min-height: 22px
+#name-alerts p, #blank-alerts p
+	margin: 0
+	font-size: 12px
+	color: #bf0000
+.waiting-container
+	padding: 40px
+	font-size: 40px
+	color: #435b7d
+.message-img
+	float: left
+#messages-container
+	background-color: #f9f9f9
+	margin: 30px auto
+	padding: 5px
+	border-radius: 5px
+	border: 2px solid #ddd
+	width: 90%
+	max-height: 2000px
+	max-width: 800px
+	overflow-y: auto
+.message
+	border: 1px solid #aaa
+	margin: 10px
+	border-radius: 5px
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12)
+	background-color: #fff
+.message-header
+	padding: 2px 5px
+.message-header p
+	display: inline-block
+.message p.timestamp
+	float: right
+	color: #232323
+	font-size: 10px
+@media all and (max-width: 450px)
+	.message p.timestamp
+		display: none
+.main-message
+	font-size: 20px
+	text-align: left
+	padding: 0 5%
+	color: #001d42
+	font-family: "Indie Flower", cursive
+#flash-container
+	color: white
+	position: fixed
+	z-index: 999999
+	width: 100%
+	text-align: center
+	height: 60px
+	font-size: 18px
+	line-height: 60px
+	opacity: .98
+#flash-container.good-notice
+	background-color: rgb(10, 117, 32)
+#flash-container.bad-notice
+	background-color: #bf0000
+.info-address
+	font-size: 10px
+	margin-top: 3px
+.info-name
+	font-weight: bold
+.purple
+	color: #7d4084
+.text-warning
+	color: #d89752
+.carousel .item p
+	padding: 0 5px 5px 5px
+.alert-msg
+	max-width: 1000px
+	margin: 0 auto 10px auto
+.to-do img, .to-do p, #transportation img
+	width: 90%
+	max-width: 450px
+	margin: 0 auto 10px auto
+.top-pad
+	padding-top: 20px
+.other-head
+	font-size: 26px
+	margin: 10px
+.extra-marg
+	margin-bottom: 30px
+.registry-links a
+	margin: 20px auto
+	max-width: 580px
+	display: block
+.registry-links a img
+	border: 1px solid #eee
+	border-radius: 5px
+	box-shadow: 0px 4px 4px #ddd
+	width: 90%
+	max-width: 550px
+	transition: all .3s
+.registry-links a img:hover
+	box-shadow: 0px 7px 8px #ccc
+.collage-btn
+	position: relative
+	display: block
+	cursor: pointer
+	margin: auto
+	max-width: 800px
+.collage-btn img
+	width: 100%
+	border: 1px solid #b3b3b3
+.collage-btn .collage-overlay
+	position: absolute
+	bottom: 0
+	right: 0
+	padding: 5px 10px
+	background-color: #435b7d
+	font-size: 12px
+	color: #fff
+.engagement-img
+	margin: auto
+	width: 100%
+.engagement-img.portrait
+	max-width: 400px !important
+.engagement-img.landscape
+	max-width: 800px !important
+@media all and (min-width: 768px)
+	.collage-btn .collage-overlay
+		font-size: 16px
+		padding: 10px
+.carousel-control.left.ec
+	left: -5% !important
+.carousel-control.right.ec
+	right: -5% !important
+#overlay, #menu-overlay, #photo-modal
+	z-index: 998
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	display: none
+	background-color: rgba(0, 0, 0, 0.7)
+#photo-modal .photo-container
+	background: #111
+	max-width: 1200px
+	margin: auto
+	height: 100%
+	display: flex
+	align-items: center
+#engagement-carousel
+	margin: auto
+	width: 100%
+#close-photos
+	position: absolute
+	top: -5px
+	right: 8px
+	font-size: 28px
+	cursor: pointer
+	color: #999
+	z-index: 999999
+#close-photos:hover
+	color: #fff
+@media all and (max-width: 450px)
+	#close-photos
+		font-size: 24px
+.instructions-container
+	display: inline-block
+	width: 50%
+	padding: 15px
+.instructions-container > img
+	width: 100%
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12)
+@media all and (max-width: 550px)
+	.instructions-container
+		width: 100%
+		display: block
+.cocktail-container
+	background-color: #2d446d
+	color: #fff
+	border-radius: 8px
+	box-shadow: 0 1px 8px 0 rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.12)
+	max-width: 500px
+	margin: auto
+	font-size: 16px
+	padding: 10px
+.cocktail-container table
+	margin: auto
+	text-align: left
+.cocktail-container table td
+	padding: 5px
+.btn.btn-shuttle
+	background-color: #31708f
+	color: #fff
+	border-color: #2b6684
+.btn.btn-shuttle:hover, .btn.btn-shuttle:focus
+	background-color: #255973
+	border-color: #204f67
+	color: #fff

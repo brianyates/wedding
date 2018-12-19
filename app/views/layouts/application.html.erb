@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="brian, yates, kirby, robbins, wedding">
+	<meta name="description" content="Kirby Robbins and Brian Yates are getting married! Please check out our wedding website for wedding details, hotel information and pictures.">
+    <meta property="og:description" content="Kirby Robbins and Brian Yates are getting married! Please check out our wedding website for wedding details, hotel information and pictures." />
+	<meta property="og:title" content="Kirby and Brian's Wedding" />
+    <meta property="og:image:secure_url" content="https://kirbyandbrian.com/assets/og_img.jpg" />
+    <title>Kirby and Brian's Wedding</title>
+	<script src="https://use.fontawesome.com/1bd1fdf468.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_KEY'] %>"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112815505-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-112815505-1');
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Rochester|Dancing+Script|Raleway|Indie+Flower" rel="stylesheet">
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+<div class="message">
+	<div class="message-header text-left">
+	<p class="name"><%= @message.name %> wrote:</p><p class="timestamp"><%= time_ago_in_words(@message.created_at) %> ago</p>
+	</div>
+	<p class="main-message"><%= @message.message %></p>
+</div>
