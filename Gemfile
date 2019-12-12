@@ -50,5 +50,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coffee-script-source', '1.8.0'
 gem 'twemoji'
 ruby '2.5.1'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'autoprefixer-rails'
